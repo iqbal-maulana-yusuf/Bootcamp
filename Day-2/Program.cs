@@ -23,7 +23,8 @@
 // nullOperator.CoalescingAssignment();
 
 // ---------------Statement----------------------
-var statement = new StatementType();
+// var statement = new StatementType();
 // statement.VariableDeclarations();
 // statement.ConstantDeclarations();
-statement.SwitchStatement(3);
+// statement.SwitchStatement(3);
+
