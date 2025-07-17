@@ -1,6 +1,9 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using CreatedType.Classes;
 using CreatedType.Inheritance;
+using CreatedType.Interface;
+using CreatedType.ObjectType;
+// using CreatedType.Struct;
 
 
 // -------------------------ReadOnly-------------------------
@@ -126,7 +129,39 @@ using CreatedType.Inheritance;
 // Console.WriteLine(yamaha.Kecepatan);
 
 // ---------------------Base----------------------
-var restaurant = new Restaurant();
-Console.WriteLine(restaurant.Liability);
+// var restaurant = new Restaurant();
+// Console.WriteLine(restaurant.Liability);
+
+
+// ---------------------OBJECT TYPE----------------------
+
+// var stack = new Stack();
+// stack.Push("sosis");
+// string s = (string)stack.Pop();
+// Console.WriteLine(s);
+
+
+// var a = new PointStruct(1, 6);
+// PointStruct b = a;
+// b.A = 5;
+
+// Console.WriteLine($"{a.A} {a.B}");
+// Console.WriteLine($"{b.A} {b.B}");
+
+// ---------------------Interface----------------------
+
+
+// ---------------------Eksplisit Interface-------------
+
+// var text = new TextBox();
+// var dokumen = new Dokumen();
+
+// IUndoable undo = dokumen;
+// undo.Undo();
+
+
+// ---------------------Static Interface-------------
+
+Console.WriteLine(IStatic.Cek());
 
 
