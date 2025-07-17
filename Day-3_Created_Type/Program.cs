@@ -1,5 +1,7 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using CreatedType.Classes;
+using CreatedType.Inheritance;
+
 
 // -------------------------ReadOnly-------------------------
 
@@ -14,7 +16,7 @@ using CreatedType.Classes;
 // overLoadingConstructur1.Show();
 // overLoadingConstructur2.Show();
 
-// ----------------------Non Public Constructur-------------
+// ----------------------Non Public Constructur-------------l
 
 // var log = Logger.GetInstace();
 // log.Log("Hallo");
@@ -58,6 +60,73 @@ using CreatedType.Classes;
 // person.LastName = "maulana";
 // person.sayHello();
 
-int count = 123;
-string name = nameof(count);
-Console.WriteLine(name);
+// ---------------------Upcasting----------------------
+// var dog = new Dog();
+// Animal myAnimal = dog;
+// myAnimal.Speak();
+
+// ---------------------Downcasting----------------------
+// Animal animal = new Dog();
+// var dog = (Dog)animal;
+// dog.Bark();
+
+
+// ---------------------as Operator----------------------
+
+// Animal animal = new Dog();
+// Dog? dog = animal as Dog;
+// dog?.Bark();
+
+
+
+// ---------------------is Operator----------------------
+
+// Animal animal = new Dog();
+// if (animal is Dog)
+// {
+//     Dog? dog = animal as Dog;
+//     dog?.Bark();
+// }
+
+// ---------------------is Operator + Pattern Matching----------------------
+// Animal animal = new Dog();
+// if (animal is Dog dog)
+// {
+//     dog.Bark();
+// }
+
+
+// ---------------------Virtual Method----------------------
+
+// var mansion = new House { Name = "Iqbal", Mortgage = 2000 };
+// VirtualMethod asset = mansion;
+// Console.WriteLine(asset.Liability);
+
+
+// ---------------------Virtual Method----------------------
+
+// var engine = new ElectricalEngine();
+// engine.Start();
+// engine.Engine();
+
+
+// ---------------------Hiding Inherite Member----------------------
+
+// var kucing = new Kucing();
+// kucing.Makan();
+// Hewan hewan = kucing;
+// hewan.Makan();
+
+
+// ---------------------Sealing Function----------------------
+
+// var honda = new Honda();
+// Console.WriteLine(honda.Kecepatan);
+// var yamaha = new Yamaha();
+// Console.WriteLine(yamaha.Kecepatan);
+
+// ---------------------Base----------------------
+var restaurant = new Restaurant();
+Console.WriteLine(restaurant.Liability);
+
+
