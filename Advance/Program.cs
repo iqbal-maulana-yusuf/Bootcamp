@@ -1,58 +1,46 @@
 ﻿
+using Advance.Event;
+// ---------------------------EVENT----------------------------
 
-using System.Security.Cryptography.X509Certificates;
-using Advance.Delegate;
-// --------------------Bentuk Umum Delegate--------------------------------
+// var seminar = new Seminar();
+// var peserta1 = new Peserta("iqbal");
+// var peserta2 = new Peserta("maulana");
 
+// seminar.onSeminarMulai += peserta1.Respons;
+// seminar.onSeminarMulai += peserta2.Respons;
 
-// Transformer t = TransformerHelper.Square;
-// int result = t(3);
-// Console.WriteLine(result);
+// seminar.Mulai();
 
-// --------------------Bentuk Umum Delegate--------------------------------
+// ---------------------------Event Declaration-----------------
 
-// int[] values = { 1, 2, 3 };
-// Transformer t = PluginMethod.Cube;
-// PluginMethod.Transform(values, t);
-// foreach (var value in values)
-// {
-//     Console.WriteLine(value);
-// }
+// var changePrice = new ChangePrice();
+// var listener1 = new Listener();
 
+// changePrice.priceChange += listener1.HandlePriceChange;
+// changePrice.Price = 50;
+// changePrice.UpdatePrice(100);
 
-// --------------------Instance Method Target--------------------------------
+// ---------------------------Standard Event Pattern-----------------
 
-// var test = new Test();
-// Transformer t = test.Square;
-// Console.WriteLine(t(9));
+// var stock = new Stock("BBCA");
+// var listener = new Listener1();
+// stock.PriceChange += listener.stock_PriceChanged;
 
-
-// --------------------Multicast Delegate--------------------------------
-
-// MessageHandler handler = Message.ShowMessage;
-// handler += Message.UppercaseMessage;
-// handler("Hello World");
-
-// --------------------Generic Delegate--------------------------------
-// TransformerGeneric<int, int> t = Utils.Square;
-
-// int[] values = { 2, 2, 2 };
-
-// Utils.Transform<int>(values, t);
-
-// foreach (var value in values)
-// {
-//     Console.WriteLine(value);
-// }
+// stock.Price = 10;  // No alert (karena belum ada old price)
+// stock.Price = 11;  // Akan muncul alert (kenaikan dari 10 ke 11 = 10%)
+// stock.Price = 11.5m;  // Tidak ada alert (kurang dari 10% dari 11)
 
 
-// --------------------Func and Action Delegate--------------------------------
+// var notify = new Restaurant("Selamat anda mendapat promo 50%");
+// var customer = new Listener2("Iqbal");
 
-int[] values = { 1, 2, 3, 4 };
-Func<int, int> t = FuncAction.Cube;
-FuncAction.Transform<int>(values, t);
-foreach (var value in values)
-{
-    Console.WriteLine(value);
-}
+// notify.Notify += customer.Customer;
+
+// notify.Send();
+
+
+
+
+
+
 
