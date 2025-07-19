@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace Advance.Event
 {
     public delegate void Notifikasi();
@@ -208,6 +210,112 @@ namespace Advance.Event
         public void HandlerMesinBerputar(object? sender, EventArgs e)
         {
             Console.WriteLine("Aplikasi Pemantau: Menerima notifikasi dari Dashboard bahwa mesin berputar!");
+        }
+    }
+
+    // Memory Optimized
+
+    public class TombolUIOptimized
+    {
+        private Dictionary<string, Delegate> _eventHandler;
+
+        public TombolUIOptimized()
+        {
+            _eventHandler = new Dictionary<string, Delegate>();
+        }
+
+        public void AddingNewEventHandler(string eventName, Delegate handler)
+        {
+            if (_eventHandler.ContainsKey(eventName))
+            {
+                _eventHandler[eventName] = Delegate.Combine(_eventHandler[eventName], handler);
+
+            }
+            else
+            {
+                _eventHandler.Add(eventName, handler);
+                Console.WriteLine("handler berhasil ditambah");
+            }
+        }
+
+        public void RemoveEventHandler(string eventName, Delegate handler)
+        {
+            if (_eventHandler.ContainsKey(eventName))
+            {
+                _eventHandler[eventName] = Delegate.Remove(_eventHandler[eventName], handler)!;
+                if (_eventHandler[eventName] == null)
+                {
+                    _eventHandler.Remove(eventName);
+                    Console.WriteLine($"Event '{eventName}' dihapus sepenuhnya.");
+                }
+                else
+                {
+                    Console.WriteLine($"Handler dari event '{eventName}' dihapus.");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Event '{eventName}' tidak ditemukan untuk dihapus.");
+            }
+        }
+
+
+        public void OnCLick()
+        {
+            if (_eventHandler.TryGetValue("OnClick", out Delegate? handler))
+            {
+                handler?.DynamicInvoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                Console.WriteLine("tidak ada handler OnCLick");
+            }
+        }
+    }
+
+    public class UIListiner
+    {
+        public void MyClickHandler(object? sender, EventArgs e)
+        {
+            Console.WriteLine("tombol di klik");
+        }
+    }
+
+    // Explicit Interface Implementation of Event
+
+    public interface IFoo
+    {
+        event EventHandler Ev;
+    }
+
+    public class Foo : IFoo
+    {
+        private EventHandler? ev;
+
+        event EventHandler IFoo.Ev
+        {
+            add
+            {
+                ev += value;
+            }
+
+            remove
+            {
+                ev -= value;
+            }
+        }
+
+        public void EventCaller()
+        {
+            ev?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    public class FooListener
+    {
+        public void DoSomething(object? sender, EventArgs e)
+        {
+            Console.WriteLine("Aku berhasil di panggil oleh event");
         }
     }
 }

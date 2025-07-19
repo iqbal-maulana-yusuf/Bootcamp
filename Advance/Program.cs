@@ -38,7 +38,27 @@ using Advance.Event;
 
 // notify.Send();
 
+// ---------------------------Relaying Event-----------------
+// var motor = new Motor();
+// var dashboard = new Dashboard(motor);
+// var aplikasi = new AplikasiPemantau();
+// dashboard.IndikatorMesinBerputar += aplikasi.HandlerMesinBerputar;
+// motor.NyalakanMesin();
 
+
+// ---------------------------Memory Optimzed-----------------
+
+// var myButton = new TombolUIOptimized();
+// var listener = new UIListiner();
+// myButton.AddingNewEventHandler("OnClick", (Delegate)listener.MyClickHandler);
+// myButton.OnCLick();
+
+// ---------------------------Explicit Interface Implementation of Event-----------------
+var foo = new Foo();
+var fooListener = new FooListener();
+IFoo fooInstance = foo;
+fooInstance.Ev += fooListener.DoSomething;
+foo.EventCaller();
 
 
 
