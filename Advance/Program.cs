@@ -1,5 +1,27 @@
 ﻿
+using System.Numerics;
+using Advance.DelegateImplementation;
+using Advance.EnumeratorAndIterator;
 using Advance.Event;
+using Advance.OperatorOverloading;
+
+// ---------------------------DELEGATE----------------------------
+
+// ---------------------------Generic Delegate--------------------
+// int x = 10;
+// GenericDelegate.DoubleNumber(x,MethodPointer.Doubled);
+
+var data = new Dictionary<int, string>
+{
+    {1,"iqbal"},
+    {2,"maulana"},
+    {3,"yusuf"}
+};
+
+GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
+
+
+
 // ---------------------------EVENT----------------------------
 
 // var seminar = new Seminar();
@@ -54,11 +76,69 @@ using Advance.Event;
 // myButton.OnCLick();
 
 // ---------------------------Explicit Interface Implementation of Event-----------------
-var foo = new Foo();
-var fooListener = new FooListener();
-IFoo fooInstance = foo;
-fooInstance.Ev += fooListener.DoSomething;
-foo.EventCaller();
+// var foo = new Foo();
+// var fooListener = new FooListener();
+// IFoo fooInstance = foo;
+// fooInstance.Ev += fooListener.DoSomething;
+// foo.EventCaller();
+
+
+// ---------------------------ENUMERATOR AND ITERATOR-----------------
+
+// ---------------------------Foreach Manual--------------------------
+
+// var foraeachManual = new ForeachManual();
+// foraeachManual.ShowBuah();
+
+// ---------------------------Foreach Manual Dictionary--------------------------
+
+
+// var foraeachManualDict = new ForeachManualDict();
+// foraeachManualDict.ShowBuah();
+
+// ---------------------------Producing Sequences with yield--------------------------
+
+// var sequence = new ProduceSequence();
+// sequence.x = 10;
+// sequence.Iterate();
+
+// ---------------------------Composing Sequence---------------------------
+// var composingSequence = new ComposingSequence();
+// composingSequence.x = 5;
+// var doubleNumber = composingSequence.DoubelNumber(composingSequence.GetNumber());
+// composingSequence.Iterate(doubleNumber);
+
+
+
+// int? umur = null;
+// Console.WriteLine(umur.HasValue);
+// Console.WriteLine(umur.GetValueOrDefault(100));
+
+
+
+// ---------------------------OPERATOR OVERLOADING----------------
+
+
+// ---------------------------unary operation----------------
+// var temp = new Temprature(20);
+
+// Console.WriteLine(++temp);
+
+
+// ---------------------------binary operation----------------
+// var a = new Complex(1, 2);
+// var b = new Complex(2, 2);
+// var c = a + b;
+// Console.WriteLine(c);
+
+// int x = int.MaxValue;
+// int y = unchecked(x + 1);        // Tidak error, hasilnya overflow (wrap around jadi negatif) // Akan melempar OverflowException
+// Console.WriteLine(y);
+
+
+
+
+
 
 
 
