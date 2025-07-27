@@ -4,6 +4,7 @@ using Advance.DelegateImplementation;
 using Advance.EnumeratorAndIterator;
 using Advance.Event;
 using Advance.OperatorOverloading;
+using Advance.TryAndCatch;
 
 // ---------------------------DELEGATE----------------------------
 
@@ -11,14 +12,25 @@ using Advance.OperatorOverloading;
 // int x = 10;
 // GenericDelegate.DoubleNumber(x,MethodPointer.Doubled);
 
-var data = new Dictionary<int, string>
-{
-    {1,"iqbal"},
-    {2,"maulana"},
-    {3,"yusuf"}
-};
+// var data = new Dictionary<int, string>
+// {
+//     {1,"iqbal"},
+//     {2,"maulana"},
+//     {3,"yusuf"}
+// };
 
-GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
+// GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
+
+// ---------------------------Contravariance----------------------------
+
+// Contravariance.StringAction action = Contravariance.ObjectAction;
+// action("Hello");
+
+
+// ---------------------------Covariance----------------------------
+
+// Covariance.ObjectRetrivier obj = Covariance.RetrievingString;
+// Console.WriteLine(obj().GetType());
 
 
 
@@ -135,7 +147,9 @@ GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
 // int y = unchecked(x + 1);        // Tidak error, hasilnya overflow (wrap around jadi negatif) // Akan melempar OverflowException
 // Console.WriteLine(y);
 
-
+// ---------------------------TRY AND CATCH STATEMENT----------------
+var trycatch = new DivisionByZero();
+trycatch.Test();
 
 
 
