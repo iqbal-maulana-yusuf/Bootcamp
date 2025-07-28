@@ -1,0 +1,1 @@
+public enum BonusSquareType { Normal, DoubleLetter, TripleLetter, DoubleWord, TripleWord }
