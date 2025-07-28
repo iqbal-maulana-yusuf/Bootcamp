@@ -5,6 +5,7 @@ using Advance.DelegateImplementation;
 using Advance.EnumeratorAndIterator;
 using Advance.Event;
 using Advance.OperatorOverloading;
+using Advance.TryAndCatch;
 
 // ---------------------------DELEGATE----------------------------
 
@@ -20,6 +21,20 @@ using Advance.OperatorOverloading;
 // };
 
 // GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
+<<<<<<< HEAD
+=======
+
+// ---------------------------Contravariance----------------------------
+
+// Contravariance.StringAction action = Contravariance.ObjectAction;
+// action("Hello");
+
+
+// ---------------------------Covariance----------------------------
+
+// Covariance.ObjectRetrivier obj = Covariance.RetrievingString;
+// Console.WriteLine(obj().GetType());
+>>>>>>> 54100525bff2a5c3349864f6ba289b429c3b2fb8
 
 
 
@@ -136,6 +151,7 @@ using Advance.OperatorOverloading;
 // int y = checked(x + 1);        // Tidak error, hasilnya overflow (wrap around jadi negatif) // Akan melempar OverflowException
 // Console.WriteLine(y);
 
+<<<<<<< HEAD
 // ---------------------------implicit operation----------------
 // Meter m = 5.0;
 // double d = m;
@@ -188,6 +204,11 @@ using Advance.OperatorOverloading;
 // bool b = null;
 // Console.WriteLine(a && b);
 
+=======
+// ---------------------------TRY AND CATCH STATEMENT----------------
+var trycatch = new DivisionByZero();
+trycatch.Test();
+>>>>>>> 54100525bff2a5c3349864f6ba289b429c3b2fb8
 
 
 
