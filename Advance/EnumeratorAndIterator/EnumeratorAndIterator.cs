@@ -6,15 +6,16 @@ namespace Advance.EnumeratorAndIterator
     public class ForeachManual
     {
         public List<string> Buah = ["apel", "jeruk", "mangga"];
-        public IEnumerator<string> penunjuk;
+        // public IEnumerator<string> penunjuk;
 
-        public ForeachManual()
-        {
-            penunjuk = Buah.GetEnumerator();
-        }
+        // public ForeachManual()
+        // {
+        //     penunjuk = Buah.GetEnumerator();
+        // }
 
         public void ShowBuah()
         {
+            var penunjuk = Buah.GetEnumerator();
             while (penunjuk.MoveNext())
             {
                 Console.WriteLine(penunjuk.Current);
@@ -95,6 +96,6 @@ namespace Advance.EnumeratorAndIterator
         }
     }
 
-    
+
 
 }

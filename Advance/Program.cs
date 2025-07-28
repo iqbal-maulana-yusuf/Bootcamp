@@ -1,5 +1,6 @@
 ﻿
 using System.Numerics;
+using System.Threading.Tasks.Dataflow;
 using Advance.DelegateImplementation;
 using Advance.EnumeratorAndIterator;
 using Advance.Event;
@@ -11,14 +12,14 @@ using Advance.OperatorOverloading;
 // int x = 10;
 // GenericDelegate.DoubleNumber(x,MethodPointer.Doubled);
 
-var data = new Dictionary<int, string>
-{
-    {1,"iqbal"},
-    {2,"maulana"},
-    {3,"yusuf"}
-};
+// var data = new Dictionary<int, string>
+// {
+//     {1,"iqbal"},
+//     {2,"maulana"},
+//     {3,"yusuf"}
+// };
 
-GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
+// GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
 
 
 
@@ -132,9 +133,60 @@ GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
 // Console.WriteLine(c);
 
 // int x = int.MaxValue;
-// int y = unchecked(x + 1);        // Tidak error, hasilnya overflow (wrap around jadi negatif) // Akan melempar OverflowException
+// int y = checked(x + 1);        // Tidak error, hasilnya overflow (wrap around jadi negatif) // Akan melempar OverflowException
 // Console.WriteLine(y);
 
+// ---------------------------implicit operation----------------
+// Meter m = 5.0;
+// double d = m;
+// Console.WriteLine(d.GetType());
+
+// Fahrenheit f = new Fahrenheit(98.6);
+// Celsius c = (Celsius)f;
+// Console.WriteLine(c);
+// ---------------------------Boolean operation----------------
+
+// var a = SqlBoolean.True;
+
+// if (a)
+//     Console.WriteLine("True");
+// else if (!a)
+//     Console.WriteLine("False");
+// else
+//     Console.WriteLine("Null");  // Ini tampil
+
+// ---------------------------NULLABLE----------------------------
+
+// implicit casting
+// int intA = 5;
+// int? nullableA = a;
+
+// ---------------------------explicit casting----------------------------
+
+// int? nullableX = 5;
+// int intX = (int)nullableX;
+
+
+// ---------------------------Boxing----------------------------
+
+// int? x = null;
+// object o = x;
+// Console.WriteLine(o == null);
+
+// ---------------------------Unboxing----------------------------
+// object o = "string";
+// int? x = o as int?;
+// Console.WriteLine(x);
+
+
+// ---------------------------Unboxing----------------------------
+// int a = 10;
+// int? b = null;
+// Console.WriteLine(a + b);
+
+// bool a = false;
+// bool b = null;
+// Console.WriteLine(a && b);
 
 
 
@@ -143,4 +195,7 @@ GenericDelegate.Antrian(data, MethodPointer.AntrianPointer);
 
 
 
-
+int? a = 5;
+int? b = null;
+int? c = a + b;
+Console.WriteLine(c);
