@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BOOTCAMP\\Bootcamp\\Scrabble\\Scrabble.csproj": {}
+    "C:\\Users\\SE-63\\Documents\\Bootcamp\\Scrabble\\Scrabble.csproj": {}
   },
   "projects": {
-    "D:\\BOOTCAMP\\Bootcamp\\Scrabble\\Scrabble.csproj": {
+    "C:\\Users\\SE-63\\Documents\\Bootcamp\\Scrabble\\Scrabble.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BOOTCAMP\\Bootcamp\\Scrabble\\Scrabble.csproj",
+        "projectUniqueName": "C:\\Users\\SE-63\\Documents\\Bootcamp\\Scrabble\\Scrabble.csproj",
         "projectName": "Scrabble",
-        "projectPath": "D:\\BOOTCAMP\\Bootcamp\\Scrabble\\Scrabble.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\BOOTCAMP\\Bootcamp\\Scrabble\\obj\\",
+        "projectPath": "C:\\Users\\SE-63\\Documents\\Bootcamp\\Scrabble\\Scrabble.csproj",
+        "packagesPath": "C:\\Users\\SE-63\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SE-63\\Documents\\Bootcamp\\Scrabble\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\SE-63\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

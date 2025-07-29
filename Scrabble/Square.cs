@@ -10,7 +10,7 @@ public class Square
         _x = x;
         _y = y;
         _bonusType = bonusType;
-        _currentTile = null; // Awalnya tidak ada tile
+        _currentTile = null;
     }
 
     public int GetX()

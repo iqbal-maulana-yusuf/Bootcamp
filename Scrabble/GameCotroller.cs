@@ -17,7 +17,7 @@ public class GameControl
     public event Func<Tile, char>? OnRequestBlankTileChar;
     public event Action<string>? OnDisplayMessage;
     public event Func<string, bool>? OnConfirmAction;
-    public event Action<string, object?>? OnGameEvent; 
+    public event Action<string, object?>? OnGameEvent;
     public event Func<string, string>? OnGetUserInput;
 
     public GameControl(IDictionary dictionary, ITileBag tileBag, IBoard board)
@@ -58,7 +58,7 @@ public class GameControl
 
         _players.Add(player);
         _playerRacks.Add(player, new List<Tile>());
-        OnDisplayMessage?.Invoke($"Player '{player.GetName()}' added.");
+        OnDisplayMessage?.Invoke($"Player '{player.GetName()}' added");
         return true;
     }
 
@@ -104,6 +104,7 @@ public class GameControl
         _currentState = GameState.InProgress;
         OnDisplayMessage?.Invoke("Game started!");
         OnGameEvent?.Invoke("GameStarted", null);
+
         return true;
     }
 
@@ -224,19 +225,17 @@ public class GameControl
         {
             return MoveError.GameAlreadyStarted;
         }
-        if (player != GetCurrentPlayer())
-        {
-            OnDisplayMessage?.Invoke("It's not your turn.");
-            return MoveError.InvalidPlacement;
-        }
         if (tilesToSwap == null || !tilesToSwap.Any())
         {
             return MoveError.InvalidTilesToSwap;
         }
+
+        // yang ini sepertinya tidak terlalu perlu
         if (tilesToSwap.Count > _playerRacks[player].Count)
         {
             return MoveError.TooManyTilesToSwap;
         }
+
         if (_tileBag.GetTilesList().Count < tilesToSwap.Count)
         {
             OnDisplayMessage?.Invoke("Not enough tiles in the bag to swap.");
@@ -805,9 +804,6 @@ public class GameControl
     public void ReturnTilesToBag(List<Tile> tiles)
     {
         _tileBag.GetTilesList().AddRange(tiles);
-        // Optionally re-shuffle the bag after returning tiles
-        // This would require a Shuffle method on ITileBag or exposing the list directly from TileBag.
-        // For now, assume drawing handles randomness well enough.
     }
 
     public int FindWordStartOnBoard(int row, int col, Direction direction)
