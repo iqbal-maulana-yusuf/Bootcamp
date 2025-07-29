@@ -1,54 +1,47 @@
 public interface IPlayer
-{
-    string GetName();
-    int GetScore();
-    List<Tile> GetRack();
-    void AddScore(int points);
-}
+    {
+        string GetName();
+        int GetScore();
+        void SetName(string name);
+        void AddScore(int points);
+        void SetScore(int score);
+    }
+
+
 
 public class Player : IPlayer
 {
     private string _name;
     private int _score;
-    private List<Tile> _rack;
 
     public Player(string name)
     {
         _name = name;
         _score = 0;
-        _rack = new List<Tile>();
     }
 
-    public string GetName() => _name;
-    public int GetScore() => _score;
-    public List<Tile> GetRack() => _rack;
-    public void AddScore(int points) => _score += points;
-}
-
-public class TileBag : ITileBag
-{
-    private List<Tile> _tiles;
-    private Random _random = new Random();
-
-    public TileBag()
+    public string GetName()
     {
-        _tiles = new List<Tile>();
-        InitializeStandardTiles();
+        return _name;
     }
 
-    public List<Tile> GetTiles() => _tiles.OrderBy(x => _random.Next()).ToList();
-    public int GetRemainingCount() => _tiles.Count;
-
-    public void InitializeStandardTiles()
+    public int GetScore()
     {
-        for (char c = 'A'; c <= 'Z'; c++)
-        {
-            int points = (c == 'Q' || c == 'Z') ? 10 : 1;
-            for (int i = 0; i < 2; i++)
-            {
-                _tiles.Add(new Tile(c, points));
-            }
-        }
-        _tiles.Add(new Tile(' ', 0)); // blank tile
+        return _score;
+    }
+
+    public void SetName(string name)
+    {
+        _name = name;
+    }
+
+    public void AddScore(int points)
+    {
+        _score += points;
+    }
+
+    public void SetScore(int score)
+    {
+        _score = score;
     }
 }

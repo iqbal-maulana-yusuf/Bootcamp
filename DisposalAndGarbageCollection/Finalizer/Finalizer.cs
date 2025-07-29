@@ -34,7 +34,8 @@ namespace DisposableAngGarbageCollection.Finalizer
         private bool _disposed = false;
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         protected virtual void Dispose(bool disposing)
