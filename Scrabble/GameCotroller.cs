@@ -1,23 +1,23 @@
 public class GameControl
 {
-    private List<IPlayer> _players;
-    private Dictionary<IPlayer, List<Tile>> _playerRacks;
-    private int _activePlayerIndex;
-    private IBoard _gameBoard;
-    private ITileBag _tileBag;
-    private IDictionary _dictionary;
-    private GameState _currentState;
-    private int _consecutiveSkips;
+    public List<IPlayer> _players;
+    public Dictionary<IPlayer, List<Tile>> _playerRacks;
+    public int _activePlayerIndex;
+    public IBoard _gameBoard;
+    public ITileBag _tileBag;
+    public IDictionary _dictionary;
+    public GameState _currentState;
+    public int _consecutiveSkips;
     private const int MIN_PLAYERS = 2;
     private const int MAX_PLAYERS = 4;
-    private HashSet<Tuple<int, int>> _usedBonusSquaresThisTurn;
+    public HashSet<Tuple<int, int>> _usedBonusSquaresThisTurn;
     private Random _randomGenerator;
 
     // Events
     public event Func<Tile, char>? OnRequestBlankTileChar;
     public event Action<string>? OnDisplayMessage;
     public event Func<string, bool>? OnConfirmAction;
-    public event Action<string, object?>? OnGameEvent; 
+    public event Action<string, object?>? OnGameEvent;
     public event Func<string, string>? OnGetUserInput;
 
     public GameControl(IDictionary dictionary, ITileBag tileBag, IBoard board)
@@ -107,13 +107,14 @@ public class GameControl
         return true;
     }
 
-    public IPlayer? GetCurrentPlayer()
+    public IPlayer GetCurrentPlayer()
     {
-        if (_players.Any() && _currentState == GameState.InProgress)
-        {
-            return _players[_activePlayerIndex];
-        }
-        return null;
+        // if (_players.Any() && _currentState == GameState.InProgress)
+        // {
+        //     return _players[_activePlayerIndex];
+        // }
+        // return null;
+        return _players[_activePlayerIndex];
     }
 
     public List<IPlayer> GetAllPlayers()
@@ -149,6 +150,7 @@ public class GameControl
         MoveError placementError = IsPlacementValid(placements);
         if (placementError != MoveError.None)
         {
+    
             return placementError;
         }
 
@@ -163,6 +165,8 @@ public class GameControl
             }
         }
 
+
+
         // Jika ada blank tile, minta input huruf yang diinginkan
         foreach (var placement in placements)
         {
@@ -172,6 +176,7 @@ public class GameControl
                 placement.GetTile().SetLetter(chosenChar);
             }
         }
+
 
         // 3. Temporarily place tiles on board to form words
         // This is a simplified approach; a more robust solution might use a temporary board state
@@ -196,7 +201,7 @@ public class GameControl
                 return MoveError.WordNotInDictionary;
             }
         }
-
+        Console.WriteLine("Checkpoint 4");
         // 5. Hitung skor
         int score = CalculateWordScore(formedWords, placements);
         player.AddScore(score);
@@ -220,15 +225,18 @@ public class GameControl
 
     public MoveError SwapTiles(IPlayer player, List<Tile> tilesToSwap)
     {
+
         if (_currentState != GameState.InProgress)
         {
             return MoveError.GameAlreadyStarted;
         }
+
         if (player != GetCurrentPlayer())
         {
             OnDisplayMessage?.Invoke("It's not your turn.");
             return MoveError.InvalidPlacement;
         }
+
         if (tilesToSwap == null || !tilesToSwap.Any())
         {
             return MoveError.InvalidTilesToSwap;
@@ -245,13 +253,19 @@ public class GameControl
 
         // Cek apakah semua tile yang akan ditukar ada di rak pemain
         List<Tile> playerTiles = _playerRacks[player];
+        List<int> indexTile = [];
         foreach (var tile in tilesToSwap)
         {
+            indexTile.Add(playerTiles.IndexOf(tile));
             if (!playerTiles.Contains(tile))
             {
                 return MoveError.TileNotInRack;
             }
         }
+
+        Console.WriteLine("\nindex tile " + indexTile[0]);
+
+
 
         // Hapus tile dari rak pemain
         foreach (var tile in tilesToSwap)
@@ -259,13 +273,21 @@ public class GameControl
             playerTiles.Remove(tile);
         }
 
+        // foreach (var tile in playerTiles)
+        // {
+        //     Console.Write(tile);
+        // }
+
         // Kembalikan tile ke dalam tas
         ReturnTilesToBag(tilesToSwap);
 
         // Ambil tile baru dari tas
         List<Tile> newTiles = DrawTilesFromBag(tilesToSwap.Count);
-        playerTiles.AddRange(newTiles);
-
+        // playerTiles.AddRange(newTiles);
+        foreach (var (idx, tile) in indexTile.Zip(newTiles, (i, t) => (i, t)))
+        {
+            playerTiles.Insert(idx, tile);
+        }
         _consecutiveSkips = 0; // Swapping is considered a turn, so reset skips
         OnDisplayMessage?.Invoke($"Player '{player.GetName()}' swapped {tilesToSwap.Count} tiles.");
         OnGameEvent?.Invoke("TilesSwapped", player);
@@ -405,6 +427,7 @@ public class GameControl
     {
         if (placements == null || !placements.Any())
         {
+
             return MoveError.InvalidPlacement;
         }
 
@@ -413,10 +436,15 @@ public class GameControl
         {
             if (!IsCoordinateValid(placement.GetX(), placement.GetY()))
             {
+
+
                 return MoveError.InvalidCoordinates;
             }
             if (!IsSquareEmptyOnBoard(placement.GetX(), placement.GetY()))
             {
+  
+
+
                 return MoveError.InvalidPlacement; // Square already occupied
             }
         }
@@ -430,23 +458,31 @@ public class GameControl
 
         if (!isHorizontal && !isVertical)
         {
+
             return MoveError.InvalidPlacement; // Not in a single line
         }
-
+        // Mencurigakan karena ya kalo ada gap gapapa
         if (placements.Count > 1)
         {
+
+  
             if (!AreConsecutivePlacements(placements))
             {
+  
+
                 return MoveError.InvalidPlacement; // Tiles are not consecutive (gaps)
             }
         }
 
         // First move special rule: Must pass through center square (7,7)
-        if (_currentState == GameState.NotStarted || !_gameBoard.GetSquare(7, 7).GetTile()?.GetLetter().ToString()
-                                                 .Any(char.IsLetterOrDigit) == true) // Check if center is truly empty (no existing tile from previous game state)
+        if (_gameBoard.GetSquare(7,7).GetTile() == null && _currentState == GameState.InProgress) // Check if center is truly empty (no existing tile from previous game state)
         {
+
+
             if (!IsValidFirstMove(placements))
             {
+
+
                 return MoveError.InvalidFirstMove;
             }
         }
@@ -454,6 +490,8 @@ public class GameControl
         {
             if (!ConnectsToExistingTiles(placements))
             {
+     
+
                 return MoveError.NotConnected;
             }
         }
@@ -531,10 +569,10 @@ public class GameControl
             int y = newPlacement.GetY();
 
             // Check neighbors
-            if ((x > 0 && _gameBoard.GetSquare(x - 1, y).GetTile() != null) || // Top
-                (x < 14 && _gameBoard.GetSquare(x + 1, y).GetTile() != null) || // Bottom
-                (y > 0 && _gameBoard.GetSquare(x, y - 1).GetTile() != null) || // Left
-                (y < 14 && _gameBoard.GetSquare(x, y + 1).GetTile() != null))   // Right
+            if ((x > 0 && _gameBoard.GetSquare(x - 1, y).GetTile() != null) || // left
+                (x < 14 && _gameBoard.GetSquare(x + 1, y).GetTile() != null) || // right
+                (y > 0 && _gameBoard.GetSquare(x, y - 1).GetTile() != null) || // bottom
+                (y < 14 && _gameBoard.GetSquare(x, y + 1).GetTile() != null))   // top
             {
                 // Ensure the neighbor isn't also one of the tiles being placed in this turn
                 // This is important to avoid false positives when placing multiple tiles next to each other
@@ -908,7 +946,7 @@ public class GameControl
         // - No valid moves left for any player (hard to check proactively)
     }
 
-    private void EndGame()
+    public void EndGame()
     {
         _currentState = GameState.Ended;
         OnDisplayMessage?.Invoke("The game has ended!");
@@ -979,4 +1017,5 @@ public class GameControl
             return null;
         }
     }
+  
 }

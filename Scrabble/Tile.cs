@@ -1,4 +1,3 @@
-
 public class Tile
 {
     private char _letter;
