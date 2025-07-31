@@ -101,10 +101,17 @@ class Program
                             Console.WriteLine("\nYour Tiles:");
                             for (int i = 0; i < rack.Count; i++)
                             {
-                                // Only show tiles not yet placed this turn
-                                if (!placements.Exists(p => p.GetTile() == rack[i]))
+                                var tile = rack[i];
+                                // Cek apakah tile ini sudah dipindahkan ke board
+                                bool isPlaced = placements.Exists(p => p.GetTile() == tile);
+
+                                if (isPlaced)
                                 {
-                                    Console.Write($"{i}:{rack[i].GetLetter()}({rack[i].GetPoints()}) ");
+                                    Console.Write($"    "); // Kosongkan posisi tile yang sudah dipindahkan
+                                }
+                                else
+                                {
+                                    Console.Write($"{i}:{tile.GetLetter()}({tile.GetPoints()}) ");
                                 }
                             }
                             Console.WriteLine("\n");
