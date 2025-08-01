@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advance", "Advance\Advance.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrabble", "Scrabble\Scrabble.csproj", "{2C3A2E4E-C22D-4519-81F3-088E074003C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurancyAndAsync", "ConcurancyAndAsync\ConcurancyAndAsync.csproj", "{E28C19B0-0FD8-4086-A9E2-81141F7201F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{2C3A2E4E-C22D-4519-81F3-088E074003C8}.Release|x64.Build.0 = Release|Any CPU
 		{2C3A2E4E-C22D-4519-81F3-088E074003C8}.Release|x86.ActiveCfg = Release|Any CPU
 		{2C3A2E4E-C22D-4519-81F3-088E074003C8}.Release|x86.Build.0 = Release|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Debug|x64.Build.0 = Debug|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Debug|x86.Build.0 = Debug|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x64.ActiveCfg = Release|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x64.Build.0 = Release|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x86.ActiveCfg = Release|Any CPU
+		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
