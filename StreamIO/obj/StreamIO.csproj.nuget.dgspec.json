@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SE-63\\Documents\\Bootcamp\\ConcurancyAndAsync\\ConcurancyAndAsync.csproj": {}
+    "C:\\Users\\SE-63\\Documents\\Bootcamp\\StreamIO\\StreamIO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SE-63\\Documents\\Bootcamp\\ConcurancyAndAsync\\ConcurancyAndAsync.csproj": {
+    "C:\\Users\\SE-63\\Documents\\Bootcamp\\StreamIO\\StreamIO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SE-63\\Documents\\Bootcamp\\ConcurancyAndAsync\\ConcurancyAndAsync.csproj",
-        "projectName": "ConcurancyAndAsync",
-        "projectPath": "C:\\Users\\SE-63\\Documents\\Bootcamp\\ConcurancyAndAsync\\ConcurancyAndAsync.csproj",
+        "projectUniqueName": "C:\\Users\\SE-63\\Documents\\Bootcamp\\StreamIO\\StreamIO.csproj",
+        "projectName": "StreamIO",
+        "projectPath": "C:\\Users\\SE-63\\Documents\\Bootcamp\\StreamIO\\StreamIO.csproj",
         "packagesPath": "C:\\Users\\SE-63\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SE-63\\Documents\\Bootcamp\\ConcurancyAndAsync\\obj\\",
+        "outputPath": "C:\\Users\\SE-63\\Documents\\Bootcamp\\StreamIO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

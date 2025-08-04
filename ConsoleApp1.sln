@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrabble", "Scrabble\Scrabb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurancyAndAsync", "ConcurancyAndAsync\ConcurancyAndAsync.csproj", "{E28C19B0-0FD8-4086-A9E2-81141F7201F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamIO", "StreamIO\StreamIO.csproj", "{32F89874-2D50-49E8-A6BA-F86C330F1870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x64.Build.0 = Release|Any CPU
 		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x86.ActiveCfg = Release|Any CPU
 		{E28C19B0-0FD8-4086-A9E2-81141F7201F7}.Release|x86.Build.0 = Release|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Debug|x64.Build.0 = Debug|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Debug|x86.Build.0 = Debug|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Release|x64.ActiveCfg = Release|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Release|x64.Build.0 = Release|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Release|x86.ActiveCfg = Release|Any CPU
+		{32F89874-2D50-49E8-A6BA-F86C330F1870}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

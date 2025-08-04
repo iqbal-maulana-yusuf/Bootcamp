@@ -1,0 +1,15 @@
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\bin\Debug\net9.0\StreamIO.exe
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\bin\Debug\net9.0\StreamIO.deps.json
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\bin\Debug\net9.0\StreamIO.runtimeconfig.json
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\bin\Debug\net9.0\StreamIO.dll
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\bin\Debug\net9.0\StreamIO.pdb
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.AssemblyInfoInputs.cache
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.AssemblyInfo.cs
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.csproj.CoreCompileInputs.cache
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.sourcelink.json
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.dll
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\refint\StreamIO.dll
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.pdb
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\StreamIO.genruntimeconfig.cache
+C:\Users\SE-63\Documents\Bootcamp\StreamIO\obj\Debug\net9.0\ref\StreamIO.dll

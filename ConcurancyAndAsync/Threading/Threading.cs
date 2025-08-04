@@ -40,10 +40,7 @@ namespace ConcurancyAndAsync.Threading
         private void DoWork()
         {
             Console.WriteLine($"[{Thread.CurrentThread.Name}] Memulai pekerjaan...");
-            for (int i = 0; i < 1000; i++)
-            {
-                Console.Write(i);
-            }
+            Thread.Sleep(10000);
             Console.WriteLine($"[{Thread.CurrentThread.Name}] Pekerjaan selesai.");
         }
     }
