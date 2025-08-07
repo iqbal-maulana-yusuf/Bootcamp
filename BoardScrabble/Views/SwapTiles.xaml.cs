@@ -1,5 +1,7 @@
 ﻿using BoardScrabble.Controller;
+using BoardScrabble.GameControllers.Interfaces;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -53,16 +55,16 @@ namespace BoardScrabble.Views
         private void Tile_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
-            var tile = button.Tag as Tile;
+            var tile = button!.Tag as Tile;
             
-            if (SelectedTiles.Contains(tile))
+            if (SelectedTiles.Contains(tile!))
             {
-                SelectedTiles.Remove(tile);
+                SelectedTiles.Remove(tile!);
                 button.Background = Brushes.LightGoldenrodYellow;
             }
             else
             {
-                SelectedTiles.Add(tile);
+                SelectedTiles.Add(tile!);
                 button.Background = Brushes.LightBlue;
             }
 
@@ -83,6 +85,11 @@ namespace BoardScrabble.Views
 
                 NavigationService?.Navigate(_gamePage);   // Kembali ke halaman game
             }
+            if (!_game.PlayerHistory.ContainsKey(_game.GetCurrentPlayer()))
+            {
+                _game.PlayerHistory[_game.GetCurrentPlayer()] = new List<string>();
+            }
+            _game.PlayerHistory[_game.GetCurrentPlayer()].Add("SWAP_TILE");
         }
 
 

@@ -3,7 +3,7 @@ public class GameControl
     private List<IPlayer> _players;
     public Dictionary<IPlayer, List<Tile>> _playerRacks;
     private int _activePlayerIndex;
-    private IBoard _gameBoard;
+    public IBoard _gameBoard;
     private ITileBag _tileBag;
     private IDictionary _dictionary;
     public GameState _currentState;

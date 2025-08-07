@@ -15,8 +15,8 @@ namespace BoardScrabble.Views
         private GameControl _game;
         private GamePage _gamePage;
 
-        // ✅ Tambahan: Event untuk callback ke GamePage
-        public event Action<char, int> OnLetterSelected;
+
+        public event Action<char, int>? OnLetterSelected;
 
         public BlankTileInput(GameControl game, GamePage gamePage, int index)
         {

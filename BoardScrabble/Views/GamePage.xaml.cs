@@ -1,4 +1,6 @@
 ﻿using BoardScrabble.Controller;
+using BoardScrabble.GameControllers.Enums;
+using BoardScrabble.GameControllers.Interfaces;
 using BoardScrabble.Views;
 using System.Collections.Generic;
 using System.Text;
@@ -24,7 +26,7 @@ namespace BoardScrabble
         public List<Tile> _tileRack = new();
         public List<TextBlock> _objectTileRack = new();
         private GameControl _game;
-        private IPlayer _currentPlayer;
+        private IPlayer? _currentPlayer;
         
        
 
@@ -42,15 +44,187 @@ namespace BoardScrabble
 
         public void StartGame()
         {
-            _currentPlayer = _game._players[_game._activePlayerIndex];
-            playerName.Text = _currentPlayer.GetName();
-            playerScore.Text = _currentPlayer.GetScore().ToString();
+ 
+            playerPanel.Children.Clear();
+            tileBagPanel.Children.Clear();
+            TileBagDisplay();
+
+            _currentPlayer = _game.GetCurrentPlayer();
+            var allPlayer = _game.GetAllPlayers();
+
+            for (int i = 0; i < _game._players.Count; i++)
+            {
+                var player = _game._players[i];
+                bool isCurrentTurn = i == _game._activePlayerIndex; 
+
+                var playerIdentity = CreatePlayerPanel(
+                    player.GetName().Substring(0,2),
+                    player.GetName(),
+                    player.GetScore(),
+                    isCurrentTurn
+                );
+
+                playerPanel.Children.Add(playerIdentity); 
+            }
+
+
+            _tileRack.Clear(); 
+
             foreach (var tile in _game._playerRacks[_currentPlayer])
             {
                 _tileRack.Add(tile);
             }
-            System.Diagnostics.Debug.WriteLine("Checkpoint 5");
         }
+
+
+        public void TileBagDisplay()
+        {
+            var tiles = _game._tileBag.GetTileCount();
+            tileBagRemainig.Text = $"🎒 Tile Bag: {_game._tileBag.GetTilesList().Count}";
+
+            var TileCount = 0;
+            foreach (var kv in tiles)
+            {
+                TileCount += kv.Value;
+
+                var tileBox = new TextBlock
+                {
+                    Text = $"{kv.Key}×{kv.Value}",
+                    Margin = new Thickness(6, 3, 6, 3),
+                    FontSize = 14,
+                    FontWeight = FontWeights.SemiBold
+                };
+
+                tileBagPanel.Children.Add(tileBox);
+            }
+        }
+
+        private void ShowPlayerHistory(IPlayer player)
+        {
+            HistoryListBox.Items.Clear(); // Kosongkan dulu
+
+            if (_game.PlayerHistory.ContainsKey(player))
+            {
+                var history = _game.PlayerHistory[player];
+
+                if (history.Count == 0)
+                {
+                    HistoryListBox.Items.Add("No words played.");
+                }
+                else
+                {
+                    foreach (var entry in history)
+                    {
+                        if (entry == "SWAP_TILE")
+                        {
+                            HistoryListBox.Items.Add("🔁 Swap Tile - Player did not form any word.");
+                        }
+                        else
+                        {
+                            HistoryListBox.Items.Add(entry);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                HistoryListBox.Items.Add("No history.");
+            }
+        }
+
+
+
+        public Border CreatePlayerPanel(string initial, string username, int score, bool isCurrentTurn)
+        {
+            // Avatar bulat kecil
+            var avatarBorder = new Border
+            {
+                Width = 30,
+                Height = 30,
+                CornerRadius = new CornerRadius(15),
+                Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#4B4B5C")),
+                VerticalAlignment = VerticalAlignment.Center,
+                Child = new TextBlock
+                {
+                    Text = initial.ToUpper(),
+                    Foreground = Brushes.White,
+                    FontWeight = FontWeights.Bold,
+                    FontSize = 14,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                }
+            };
+
+            // Username dan skor
+            var textStack = new StackPanel
+            {
+                Margin = new Thickness(10, 0, 0, 0),
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            textStack.Children.Add(new TextBlock
+            {
+                Text = username,
+                FontWeight = FontWeights.SemiBold,
+                FontSize = 13,
+                Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#333333"))
+            });
+            textStack.Children.Add(new TextBlock
+            {
+                Text = score.ToString(),
+                FontWeight = FontWeights.Bold,
+                FontSize = 16,
+                Foreground = Brushes.Black,
+                Margin = new Thickness(0, 4, 0, 0)
+            });
+
+            // Grid
+            var grid = new Grid();
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+
+            grid.Children.Add(avatarBorder);
+            Grid.SetColumn(textStack, 1);
+            grid.Children.Add(textStack);
+
+            // Gaya tergantung giliran pemain
+            Brush backgroundBrush;
+            Brush borderBrush;
+            Thickness padding;
+            double fontScale = 1.0;
+
+            if (isCurrentTurn)
+            {
+                backgroundBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A4C2F4")); // biru muda
+                borderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#6D9EEB"));     // biru lebih gelap
+                padding = new Thickness(12); // sedikit lebih besar
+                fontScale = 1.1; // sedikit lebih besar jika ingin, opsional
+            }
+            else
+            {
+                backgroundBrush = Brushes.White;
+                borderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#DDDDDD"));
+                padding = new Thickness(10);
+            }
+
+            // Border utama
+            var outerBorder = new Border
+            {
+                CornerRadius = new CornerRadius(10),
+                BorderBrush = borderBrush,
+                BorderThickness = new Thickness(2),
+                Background = backgroundBrush,
+                Padding = padding,
+                Margin = new Thickness(5),
+                Child = grid
+            };
+
+            return outerBorder;
+        }
+
+
+
+
+
 
 
         public void GenerateRack(List<Tile> _tileRack)
@@ -59,7 +233,7 @@ namespace BoardScrabble
             TilePanel.Children.Clear();
             _objectTileRack.Clear();
 
-            System.Diagnostics.Debug.WriteLine("Checkpoint 6");
+
 
             for (int i = 0; i < col; i++)
             {
@@ -85,12 +259,12 @@ namespace BoardScrabble
                 tileInRack.MouseLeftButtonDown += Tile_MouseLeftButtonDown;
                 TilePanel.Children.Add(tileInRack);
             }
-            System.Diagnostics.Debug.WriteLine("Checkpoint 7");
+
         }
 
         private void GenerateBoard()
         {
-            int size = 15;
+            int size = _game._gameBoard.GetBoardSize();
 
             for (int i = 0; i < size; i++)
             {
@@ -176,7 +350,7 @@ namespace BoardScrabble
         {
             if (sender is TextBlock currentTileInRack)
             {
-                _draggedTileInitialRackIndex = int.Parse(currentTileInRack.Tag.ToString());
+                _draggedTileInitialRackIndex = int.Parse(currentTileInRack.Tag.ToString()!);
                 _draggedTileInitialRackText = currentTileInRack.Text;
                 _draggedTileInitialRackBackground = currentTileInRack.Background;
                 if (currentTileInRack.Text == " ")
@@ -274,7 +448,7 @@ namespace BoardScrabble
                 PositionDraggedTile(e.GetPosition(FloatingCanvas));
 
                 var hit = VisualTreeHelper.HitTest(BoardGrid, e.GetPosition(BoardGrid));
-                var border = FindParent<Border>(hit?.VisualHit);
+                var border = FindParent<Border>(hit?.VisualHit!);
 
                 if (_potentialDropTarget != null && _potentialDropTarget != border)
                 {
@@ -299,7 +473,7 @@ namespace BoardScrabble
                 bool placedOnBoard = false;
                 var pointOnBoard = e.GetPosition(BoardGrid);
                 var hitBoard = VisualTreeHelper.HitTest(BoardGrid, pointOnBoard);
-                var targetBorder = FindParent<Border>(hitBoard?.VisualHit);
+                var targetBorder = FindParent<Border>(hitBoard?.VisualHit!);
 
                 bool isValidBoardDropTarget = targetBorder != null && BoardGrid.Children.Contains(targetBorder) && targetBorder.Child == null;
 
@@ -311,7 +485,7 @@ namespace BoardScrabble
                     newTileForBoard.Opacity = 1.0;
                     newTileForBoard.MouseLeftButtonDown += Tile_OnBoard_MouseLeftButtonDown;
 
-                    targetBorder.Child = new Grid { Children = { newTileForBoard } };
+                    targetBorder!.Child = new Grid { Children = { newTileForBoard } };
                     placedOnBoard = true;
 
                     _tilePosition[newTileForBoard.Tag] = (row, col);
@@ -373,7 +547,7 @@ namespace BoardScrabble
 
         private void ResetBorderAppearance(Border border)
         {
-            border.BorderBrush = (Brush)new BrushConverter().ConvertFromString("#c4c4d1");
+            border.BorderBrush = (Brush)new BrushConverter().ConvertFromString("#c4c4d1")!;
             border.BorderThickness = new Thickness(1);
         }
 
@@ -402,7 +576,7 @@ namespace BoardScrabble
 
         private void SwapButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new SwapTiles(_tileRack, _game, _currentPlayer, this));
+            NavigationService?.Navigate(new SwapTiles(_tileRack, _game, _currentPlayer!, this));
             StartGame();
             GenerateRack(_tileRack);
         }
@@ -413,10 +587,67 @@ namespace BoardScrabble
             
         }
 
+        public void UpdateBoardFromController()
+        {
+            // Bersihkan semua border di papan
+            foreach (UIElement child in BoardGrid.Children)
+            {
+                if (child is Border border)
+                {
+                    border.Child = null;
+                }
+            }
+
+            var grid = _game._gameBoard.GetGrid();
+            int size = _game._gameBoard.GetBoardSize();
+
+            for (int row = 0; row < size; row++)
+            {
+                for (int col = 0; col < size; col++)
+                {
+                    var square = grid[row, col]; // Pastikan indeks baris dan kolom benar di sini
+                    var tile = square.GetTile();
+
+                    if (tile != null)
+                    {
+           
+                        var border = BoardGrid.Children
+                            .OfType<Border>()
+                            .FirstOrDefault(b => Grid.GetRow(b) == row && Grid.GetColumn(b) == col);
+
+                        if (tile != null)
+                        {
+
+                            var textBlock = new TextBlock
+                            {
+                                Text = tile.GetLetter().ToString(),
+                                FontSize = 16,
+                                FontWeight = FontWeights.Bold,
+                                TextAlignment = TextAlignment.Center,
+                                VerticalAlignment = VerticalAlignment.Center,
+                                HorizontalAlignment = HorizontalAlignment.Center,
+                                Tag = $"{row}_{col}"
+                            };
+
+                            textBlock.MouseLeftButtonDown += Tile_OnBoard_MouseLeftButtonDown;
+
+                            var innerGrid = new Grid();
+                            innerGrid.Children.Add(textBlock);
+
+
+                            border.Child = innerGrid;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
         private void ReplaceBorderAt(int targetRow, int targetCol, string text)
         {
             // 1. Cari dan hapus elemen Border yang ada di posisi target
-            UIElement elementToRemove = null;
+            UIElement? elementToRemove = null;
             foreach (UIElement child in BoardGrid.Children)
             {
                 if (Grid.GetRow(child) == targetRow && Grid.GetColumn(child) == targetCol)
@@ -490,29 +721,28 @@ namespace BoardScrabble
             }
 
 
-            foreach (var tl in _tileRack)
-            {
-                tileBagElement.Text = tl.GetLetter().ToString();
-            }
 
-            MoveError error = _game.PerformTurn(_currentPlayer, placements);
+
+
+            MoveError error = _game.PerformTurn(_currentPlayer!, placements);
             if (error != MoveError.None)
             {
-                tileBagElement.Text = "error";
+                return;
             }
-            else
+            foreach (var placement in placements)
             {
-                tileBagElement.Text = "success";
-                foreach (var placement in placements)
-                {
-                    ReplaceBorderAt(placement.GetX(), placement.GetY(), placement.GetTile().GetLetter().ToString());
-                }
-
-                _tileRack.Clear();
-                _tilePosition.Clear();
-                StartGame();
-                GenerateRack(_tileRack);
+                ReplaceBorderAt(placement.GetX(), placement.GetY(), placement.GetTile().GetLetter().ToString());
             }
+
+            _tileRack.Clear();
+            _tilePosition.Clear();
+            StartGame();
+            GenerateRack(_tileRack);
+            ShowPlayerHistory(_game.GetCurrentPlayer());
+            UpdateBoardFromController();
+                
+
+            
         }
 
     }

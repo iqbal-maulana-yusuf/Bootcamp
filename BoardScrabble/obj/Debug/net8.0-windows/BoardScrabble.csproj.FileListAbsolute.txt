@@ -28,3 +28,5 @@ D:\BOOTCAMP\BoardScrabble\obj\Debug\net8.0-windows\Views\BlankTileInput.baml
 D:\BOOTCAMP\BoardScrabble\obj\Debug\net8.0-windows\Views\BlankTileInput.g.cs
 D:\BOOTCAMP\BoardScrabble\obj\Debug\net8.0-windows\Views\EndGame.g.cs
 D:\BOOTCAMP\BoardScrabble\obj\Debug\net8.0-windows\Views\EndGame.baml
+D:\BOOTCAMP\BoardScrabble\obj\Debug\net8.0-windows\Page1.g.cs
+D:\BOOTCAMP\BoardScrabble\obj\Debug\net8.0-windows\Page1.baml

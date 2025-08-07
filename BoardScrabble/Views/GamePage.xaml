@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BoardScrabble"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="1000"
+      d:DesignHeight="600" d:DesignWidth="1200"
       Title="GamePage"
       MouseMove="GamePage_MouseMove"
       MouseLeftButtonUp="GamePage_MouseLeftButtonUp">
@@ -59,88 +59,99 @@
                 </Border>
 
                 <!-- Action Buttons -->
+                <!-- Optional: Add buttons here -->
             </StackPanel>
         </Grid>
 
         <!-- Right Side: Side Panel -->
         <Border Grid.Column="1"
-                Margin="0,10"
-                Width="300"
+                Width="500"
+                Height="auto"
                 Background="White"
-                MaxHeight="500"
                 CornerRadius="12"
                 BorderBrush="#CCCCCC"
                 BorderThickness="1"
                 Padding="15"
+                Margin="0,30,50,30"
                 Effect="{StaticResource TileShadowEffect}">
 
             <StackPanel>
                 <!-- Player Info -->
-                <StackPanel Margin="0,0,0,10">
-                    <TextBlock Text="👤 Player Info" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-                    <TextBlock x:Name="playerName" Text="" FontSize="14" Foreground="#444" />
-                    <TextBlock x:Name="playerScore" Text="" FontSize="14" Foreground="#444"/>
-                </StackPanel>
-
+                <TextBlock Text="👥 Player Info" FontSize="16" FontWeight="Bold" Margin="0,0,0,5"/>
+                <UniformGrid x:Name="playerPanel" Columns="{Binding PlayerCount}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                </UniformGrid>
                 <Separator Margin="0,10"/>
-
                 <!-- Tile Bag -->
-                <StackPanel Margin="0,0,0,10">
-                    <TextBlock Text="🎒 Tile Bag" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
-                    <TextBlock x:Name="tileBagElement" Text="Remaining Tiles: 82" FontSize="14" Foreground="#444"/>
-                    <WrapPanel Name="TileBagPanel" Margin="0,5" />
+                <StackPanel>
+                    <Border  Background="#F8F7FD" CornerRadius="12" Padding="10" Margin="10">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal"
+                                    Margin="10"
+                                    VerticalAlignment="Center"
+                                HorizontalAlignment="Left">
+                                <TextBlock x:Name="tileBagRemainig"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"/>
+                                <TextBlock Text="{Binding TileCount, ElementName=TileBagControl}"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"/>
+                            </StackPanel>
+                            <Separator Margin="0,8"/>
+
+                            <!-- Tiles -->
+                            <WrapPanel x:Name="tileBagPanel" Margin="0,5,0,0"/>
+
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
 
-                <Separator Margin="0,10"/>
+                <Separator />
 
                 <!-- Move History -->
                 <StackPanel>
-                    <TextBlock Text="📝 Move History" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
-                    <ListBox Name="HistoryListBox" Height="200"
-                             BorderBrush="#ddd" BorderThickness="1"
-                             Background="#fafafa" />
+                    <TextBlock Text="📝 Move History" FontSize="16" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <ListBox Name="HistoryListBox" Height="70"
+                         BorderBrush="#ddd" BorderThickness="1"
+                         Background="#fafafa" />    
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal"
-                  HorizontalAlignment="Center"
-                  >
 
+                <!-- Buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
                     <Button Name="SwapButton" Content="🔁 Swap"
-                      Width="70" Height="36"
-                      FontWeight="Bold" Background="#FFD966"
-                      Foreground="Black"
-                      BorderBrush="#C2A600" BorderThickness="1.5"
-                      Click="SwapButton_Click">
+                            Width="70" Height="36"
+                            FontWeight="Bold" Background="#FFD966"
+                            Foreground="Black"
+                            BorderBrush="#C2A600" BorderThickness="1.5"
+                            Click="SwapButton_Click">
                         <Button.Effect>
                             <DropShadowEffect BlurRadius="5" ShadowDepth="2" Color="Gray"/>
                         </Button.Effect>
                     </Button>
 
-                    <Button Name="QuitButtin" Content="🕵️‍ Quit"
-                      Width="70" Height="36"
-                      FontWeight="Bold" Background="#A4C2F4"
-                      Foreground="Black" Margin="10,0,10,0"
-                      BorderBrush="#4A90E2" BorderThickness="1.5"
-                      Click="QuitButton_Click">
+                    <Button Name="QuitButton" Content="🕵️‍ Quit"
+                            Width="70" Height="36"
+                            FontWeight="Bold" Background="#A4C2F4"
+                            Foreground="Black" Margin="10,0,10,0"
+                            BorderBrush="#4A90E2" BorderThickness="1.5"
+                            Click="QuitButton_Click">
                         <Button.Effect>
                             <DropShadowEffect BlurRadius="5" ShadowDepth="2" Color="Gray"/>
                         </Button.Effect>
                     </Button>
 
                     <Button Name="ApplyButton" Content="✅ Apply"
-                      Width="70" Height="36"
-                      FontWeight="Bold" Background="#93C47D"
-                      Foreground="Black"
-                      BorderBrush="#38761D" BorderThickness="1.5"
-                      Click="ApplyButton_Click">    
+                            Width="70" Height="36"
+                            FontWeight="Bold" Background="#93C47D"
+                            Foreground="Black"
+                            BorderBrush="#38761D" BorderThickness="1.5"
+                            Click="ApplyButton_Click">
                         <Button.Effect>
                             <DropShadowEffect BlurRadius="5" ShadowDepth="2" Color="Gray"/>
                         </Button.Effect>
                     </Button>
                 </StackPanel>
             </StackPanel>
-            
-            
         </Border>
 
         <!-- Floating Tile Canvas -->

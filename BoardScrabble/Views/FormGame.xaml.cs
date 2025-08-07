@@ -16,7 +16,7 @@ namespace BoardScrabble
 
         private void PlayerCountComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int selectedCount = int.Parse(((ComboBoxItem)PlayerCountComboBox.SelectedItem).Content.ToString());
+            int selectedCount = int.Parse(((ComboBoxItem)PlayerCountComboBox.SelectedItem).Content.ToString()!);
 
             Player3Panel.Visibility = selectedCount >= 3 ? Visibility.Visible : Visibility.Collapsed;
             Player4Panel.Visibility = selectedCount == 4 ? Visibility.Visible : Visibility.Collapsed;

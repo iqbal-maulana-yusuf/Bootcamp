@@ -45,3 +45,32 @@ public class Player : IPlayer
         _score = score;
     }
 }
+
+
+public class Mahasiswa : IPlayer
+{
+    public void AddScore(int points)
+    {
+        throw new NotImplementedException();
+    }
+
+    public string GetName()
+    {
+        throw new NotImplementedException();
+    }
+
+    public int GetScore()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetName(string name)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetScore(int score)
+    {
+        throw new NotImplementedException();
+    }
+}
