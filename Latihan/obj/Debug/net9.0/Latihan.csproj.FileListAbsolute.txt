@@ -1,0 +1,5 @@
+D:\BOOTCAMP\Bootcamp\Latihan\obj\Debug\net9.0\Latihan.GeneratedMSBuildEditorConfig.editorconfig
+D:\BOOTCAMP\Bootcamp\Latihan\obj\Debug\net9.0\Latihan.AssemblyInfoInputs.cache
+D:\BOOTCAMP\Bootcamp\Latihan\obj\Debug\net9.0\Latihan.AssemblyInfo.cs
+D:\BOOTCAMP\Bootcamp\Latihan\obj\Debug\net9.0\Latihan.csproj.CoreCompileInputs.cache
+D:\BOOTCAMP\Bootcamp\Latihan\obj\Debug\net9.0\Latihan.sourcelink.json

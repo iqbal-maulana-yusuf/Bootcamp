@@ -1,0 +1,339 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BOOTCAMP\\BoardScrabble\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\gamecontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\gamecontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\gamepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\gamepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\gamepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\gamepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\swaptiles.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\swaptiles.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\swaptiles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\swaptiles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\formgame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\formgame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\endgame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\endgame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\boardscrabble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:boardscrabble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\interfaces\\iboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\interfaces\\iboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\tilebag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\tilebag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\blanktileinput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\blanktileinput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\gamecontrollers\\interfaces\\itilebag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:gamecontrollers\\interfaces\\itilebag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\page1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:page1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\formgame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\formgame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\endgame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\endgame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|d:\\bootcamp\\boardscrabble\\views\\blanktileinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFA13713-53C7-49D0-9000-ADD93950F1FF}|BoardScrabble.csproj|solutionrelative:views\\blanktileinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 246,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SwapTiles.xaml",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\SwapTiles.xaml",
+              "RelativeDocumentMoniker": "Views\\SwapTiles.xaml",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\SwapTiles.xaml",
+              "RelativeToolTip": "Views\\SwapTiles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-07T16:34:32.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GamePage.xaml.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\GamePage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\GamePage.xaml.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\GamePage.xaml.cs",
+              "RelativeToolTip": "Views\\GamePage.xaml.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAwwHAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T04:08:28.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Board.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Board.cs",
+              "RelativeDocumentMoniker": "GameControllers\\Board.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Board.cs",
+              "RelativeToolTip": "GameControllers\\Board.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAYwCYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T03:11:05.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SwapTiles.xaml.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\SwapTiles.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\SwapTiles.xaml.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\SwapTiles.xaml.cs",
+              "RelativeToolTip": "Views\\SwapTiles.xaml.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAowFkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T01:28:58.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Tile.cs",
+              "RelativeDocumentMoniker": "GameControllers\\Tile.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Tile.cs",
+              "RelativeToolTip": "GameControllers\\Tile.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T06:04:27.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GamePage.xaml",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\GamePage.xaml",
+              "RelativeDocumentMoniker": "Views\\GamePage.xaml",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\GamePage.xaml",
+              "RelativeToolTip": "Views\\GamePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-07T16:17:30.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BoardScrabble.csproj",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\BoardScrabble.csproj",
+              "RelativeDocumentMoniker": "BoardScrabble.csproj",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\BoardScrabble.csproj",
+              "RelativeToolTip": "BoardScrabble.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-06T15:57:36.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameControllercs.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\GameControllercs.cs",
+              "RelativeDocumentMoniker": "GameControllers\\GameControllercs.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\GameControllercs.cs",
+              "RelativeToolTip": "GameControllers\\GameControllercs.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAswNcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T10:37:51.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EndGame.xaml",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\EndGame.xaml",
+              "RelativeDocumentMoniker": "Views\\EndGame.xaml",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\EndGame.xaml",
+              "RelativeToolTip": "Views\\EndGame.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-05T16:27:19.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormGame.xaml",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\FormGame.xaml",
+              "RelativeDocumentMoniker": "Views\\FormGame.xaml",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\FormGame.xaml",
+              "RelativeToolTip": "Views\\FormGame.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-05T16:50:19.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IBoard.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Interfaces\\IBoard.cs",
+              "RelativeDocumentMoniker": "GameControllers\\Interfaces\\IBoard.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Interfaces\\IBoard.cs",
+              "RelativeToolTip": "GameControllers\\Interfaces\\IBoard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T06:18:21.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Square.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Square.cs",
+              "RelativeDocumentMoniker": "GameControllers\\Square.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Square.cs",
+              "RelativeToolTip": "GameControllers\\Square.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T06:06:34.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TileBag.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\TileBag.cs",
+              "RelativeDocumentMoniker": "GameControllers\\TileBag.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\TileBag.cs",
+              "RelativeToolTip": "GameControllers\\TileBag.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T17:22:50.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EndGame.xaml.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\EndGame.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\EndGame.xaml.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\EndGame.xaml.cs",
+              "RelativeToolTip": "Views\\EndGame.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAhwAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T16:29:49.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Page1.xaml",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Page1.xaml",
+              "RelativeDocumentMoniker": "Page1.xaml",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Page1.xaml",
+              "RelativeToolTip": "Page1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-06T15:58:27.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ITileBag.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Interfaces\\ITileBag.cs",
+              "RelativeDocumentMoniker": "GameControllers\\Interfaces\\ITileBag.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\GameControllers\\Interfaces\\ITileBag.cs",
+              "RelativeToolTip": "GameControllers\\Interfaces\\ITileBag.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T17:31:43.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BlankTileInput.xaml.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\BlankTileInput.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\BlankTileInput.xaml.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\BlankTileInput.xaml.cs",
+              "RelativeToolTip": "Views\\BlankTileInput.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T11:36:14.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BlankTileInput.xaml",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\BlankTileInput.xaml",
+              "RelativeDocumentMoniker": "Views\\BlankTileInput.xaml",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\BlankTileInput.xaml",
+              "RelativeToolTip": "Views\\BlankTileInput.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-05T11:21:59.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormGame.xaml.cs",
+              "DocumentMoniker": "D:\\BOOTCAMP\\BoardScrabble\\Views\\FormGame.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\FormGame.xaml.cs",
+              "ToolTip": "D:\\BOOTCAMP\\BoardScrabble\\Views\\FormGame.xaml.cs",
+              "RelativeToolTip": "Views\\FormGame.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwEcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T03:42:26.334Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 154,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
