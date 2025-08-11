@@ -1,8 +1,8 @@
 public class GameControl
 {
-    private List<IPlayer> _players;
+    public List<IPlayer> _players;
     public Dictionary<IPlayer, List<Tile>> _playerRacks;
-    private int _activePlayerIndex;
+    private int _activePlayerIndex = 0;
     private IBoard _gameBoard;
     private ITileBag _tileBag;
     private IDictionary _dictionary;
@@ -86,11 +86,13 @@ public class GameControl
     {
         if (_currentState != GameState.NotStarted)
         {
+            Console.WriteLine("Checkpoint 1");
             OnDisplayMessage?.Invoke("Game has already started or ended.");
             return false;
         }
         if (!ValidatePlayerCount())
         {
+            Console.WriteLine("Checkpoint 2");
             OnDisplayMessage?.Invoke($"Need between {MIN_PLAYERS} and {MAX_PLAYERS} players to start.");
             return false;
         }
@@ -104,6 +106,7 @@ public class GameControl
         _currentState = GameState.InProgress;
         OnDisplayMessage?.Invoke("Game started!");
         OnGameEvent?.Invoke("GameStarted", null);
+        Console.WriteLine("End");
 
         return true;
     }

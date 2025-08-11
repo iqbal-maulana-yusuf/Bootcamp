@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StreamIO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13a3e66b1eecd916e67bf20a5ddcfd7a695c1341")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7c992b9e9e3d23e24ac6b6a1e0376a867cb9dd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("StreamIO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StreamIO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
